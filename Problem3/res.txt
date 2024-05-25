@@ -1,0 +1,6 @@
+ID should be a number
+Name should be a string
+Rating should be a number
+Description should be a string
+Genre should be a string
+Cast should be an array of strings.
