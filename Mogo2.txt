@@ -1,0 +1,74 @@
+1. What is a NoSQL Database, and explain the types of NoSQL database?
+Ans:-NoSQL databases:----are non-relational databases designed to handle a variety of data models, including key-value, document, column-family, and graph formats. They are known for their ability to handle large volumes of unstructured data, high scalability, and flexibility.
+Type of the NoSQL data:-they are 4 type of :-1.Document Databases
+2.Key-Value Stores
+3.Column-Family Stores
+4.Graph Databases 
+
+
+2.  What is the difference between SQL and NoSQL databases?
+Ans:- SQL Databases (Relational Databases):
+Schema:        Predefined schema with structured data.
+DataIntegrity: Strong ACID (Atomicity, Consistency, Isolation, Durability) compliance.
+Scalability:   Typically scale vertically (adding more power to the existing machine).
+Query Language: Use SQL (Structured Query Language) for defining and manipulating data.
+Examples: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
+
+
+NoSQL Databases (Non-Relational Databases):
+Schema: Dynamic schema for unstructured data.
+Data Integrity: Generally follow eventual consistency; some may support ACID transactions.
+Scalability: Typically scale horizontally (adding more machines to the pool of resources).
+Query Language: Use various query languages, often specific to the database type.
+Examples: MongoDB, Cassandra, Redis, Neo4j
+
+
+3.How to choose between MongoDB and MySQL based on your requirements?
+Ans:-MongoDB is suitable when:
+
+👉You need a flexible schema design to handle unstructured or semi-structured data.
+👉Your application requires high scalability and performance for large volumes of data.
+👉You prefer a document-oriented database with rich querying and indexing capabilities.
+
+MySQL is suitable when:
+👉You need a structured schema with relationships between data entities.
+👉Your application requires strong ACID compliance for transactional integrity.
+👉You prefer using a well-established RDBMS with a robust SQL query language.
+
+
+4.What are collections and documents in a MongoDB database?
+Ans:Collections: Equivalent to tables in SQL databases. A collection holds multiple documents.
+Documents: Equivalent to rows in SQL databases. A document is a set of key-value pairs stored in a format similar to JSON.
+
+5.What is BSON? What is the difference between BSON and JSON?
+Ans:-BSON (Binary JSON): A binary-encoded serialization format used by MongoDB to store documents. It supports more data types than JSON (like dates and binary data) and is more efficient in terms of space and speed.
+JSON (JavaScript Object Notation): A text-based data interchange format that is easy to read and write for humans and machines. It is used widely in web APIs.
+
+6.What are MongoDB Compass and MongoDB Shell used for?
+Ans:-MongoDB Compass: A graphical user interface (GUI) for MongoDB that allows users to visualize and manipulate data. It provides functionalities like query building, schema analysis, and performance monitoring.
+MongoDB Shell: A command-line interface (CLI) for MongoDB that allows users to interact with the database using JavaScript commands. It is useful for administrative tasks and scripting.
+
+7.How to create collections in MongoDB?
+Ans:-db.createCollection("myCollection");
+
+
+8.What is the difference between insertMany and insertOne?
+Ans:-insertOne: Inserts a single document into a collection.
+insertMany: Inserts multiple documents into a collection at once.
+
+9.What is the difference between deleteOne and deleteMany?
+Ans:-deleteOne: Deletes the first document that matches the specified filter criteria.
+deleteMany: Deletes all documents that match the specified filter criteria.
+
+10.How to read data in MongoDB? What is the difference between find and findOne?
+Ans:-find: Retrieves multiple documents that match the query criteria.
+findOne: Retrieves the first document that matches the query criteria.
+
+
+11.What is $set in MongoDB?
+Ans:-The $set operator is used to update the value of a field in a document. If the field does not exist, it will be created.
+db.collection.updateOne({ _id: 1 }, { $set: { name: "New Name" } });
+
+
+12.How to filter data using MongoDB?
+Ans:-Filtering data in MongoDB is done using the find method with query criteria.
