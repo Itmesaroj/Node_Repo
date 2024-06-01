@@ -1,0 +1,40 @@
+1. Write Mongo query to retrieve documents from the products where supplier_id is 3 .
+Ans:- db.products.aggregate([{$match:{supplier_id:3}}])
+
+
+2.Write Mongo query to retrieve the documents from the orders collection with "status": "shipped" .
+Ans:- db.orders.aggregate([{$match:{status:"shipped"}}])
+
+3.Write Mongo query to find buyers who from state CA ?
+Ans:-db.buyers.aggregate([{$match:{"address.state":"CA"}}])
+
+
+4.Write Mongo query to retrieve the amount,paymentstatus and paymentMethod from payments.
+Ans:-db.payments.aggregate([{$project:{amount:1,paymentstatus:1,paymentMethod:1}}])
+
+
+5.Write Mongo query to retrieve documents from the orders with out _id.
+Ans:- db.orders.aggregate([{$match:{_id:1}}])
+
+6.Write Mongo query to retrieve name,price from the products.
+Ans:- db.products.aggregate([{$project:{name:1,price:1}}])
+
+7.Write Mongo query to find buyers city and zip code ?
+Ans:- db.buyers.aggregate([{$project:{"address.city":1,"address.zip":1}}])
+
+
+8.Write Mongo query to find buyers name,email, city and zip code ?
+Ans:-db.buyers.aggregate([{$project:{"address.state":0,"address.street":0}}])
+
+9.Write Mongo query to find suppliers name and phone ?
+Ans:-db.suppliers.aggregate([{$project:{city:0}}])
+
+
+10.Write Mongo query to find buyers name,email, city and zip code ?
+Ans:-db.buyers.aggregate([{$project:{"address.state":0,"address.street":0}}])
+
+11.Write Mongo query to find buyers city and zip code ?
+Ans:-db.buyers.aggregate([{$project:{"address.city":1,"address.zip":1}}])
+
+12.Write Mongo query to retrieve name,price from the products.
+Ans:- db.products.aggregate([{$project:{name:1,price:1}}])
