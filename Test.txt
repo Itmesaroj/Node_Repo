@@ -1,0 +1,20 @@
+1.Write Mongo query to retrieve the documents from the payments collection with an amount lesser than or equal to 30.
+Ans:-db.payments.find({amount:{$lte:30}});
+
+
+2.Write Mongo query to retrieve orders sorted by order date in ascending order.
+Ans:- db.orders.find().sort({date:1})
+
+3.Write Mongo query to get the total number of orders count per customer ?
+Ans:-
+
+4.Write Mongo query to find the average total of orders made by customers who live in California(CA).
+The answer should be a with a key avgTotal and it's value should Integer not a Float.
+Ans:-
+
+5.Write Mongo query to find Most used payment Method as paymentMethod and the number of time it is used as count.
+Ans:-
+
+6.Write Mongo query to retrieve the ship_date and order_date of an order whose payment status is pending by payment _id.
+Hint: use MongoDB aggregation pipeline with $match, $lookup, $project, $unwind
+Ans:- db.payments.aggregate([{$match:{paymentstatus:"pending"}},{$project:{ship_date:1,order_date:1}}])
